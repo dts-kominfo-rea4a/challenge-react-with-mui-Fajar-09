@@ -24,7 +24,7 @@ const Contact = ({ data }) => {
           padding: "20px",
         }}
       >
-        {/* {data.map((data, id) => {
+        {data.map((data, id) => {
           return (
             <ListItem key={id}>
               <ListItemAvatar>
@@ -41,7 +41,7 @@ const Contact = ({ data }) => {
               </div>
             </ListItem>
           );
-        })} */}
+        })}
       </Box>
     </>
   );
