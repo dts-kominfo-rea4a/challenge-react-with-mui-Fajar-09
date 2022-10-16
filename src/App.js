@@ -1,4 +1,6 @@
-import './App.css';
+import "./App.css";
+
+import Header from "./components/Header";
 
 // Uncomment untuk memuat daftar kontak
 // import contactsJSON from './data/contacts.json';
@@ -12,6 +14,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
     </div>
   );
 };
