@@ -8,7 +8,7 @@ import Contact from "./components/Contact";
 // mengambil data JSON dari contact.json
 import dataJSON from "./data/contacts.json";
 
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 // Uncomment untuk memuat daftar kontak
 // import contactsJSON from './data/contacts.json';
@@ -35,7 +35,18 @@ const App = () => {
           <ContactForm propsAddContact={tambahContact} />
         </Grid>
         <Grid item xs={6}>
-          <Contact data={contact} />
+          <Box
+            sx={{
+              backgroundColor: "#90caf9",
+              margin: "80px 50px",
+              padding: "20px",
+            }}
+          >
+            {contact.map((list, id) => {
+              return <Contact data={list} key={id} />;
+            })}
+          </Box>
+          {/* <Contact data={contact} /> */}
         </Grid>
       </Grid>
     </div>
